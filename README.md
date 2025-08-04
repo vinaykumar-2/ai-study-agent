@@ -31,7 +31,7 @@ Built using **Streamlit, LangChain, Google Gemini API, Groq LLM, FAISS, and Duck
 
 1️⃣ **Clone the repository**  
 ```bash
-git clone https://github.com/your-username/ai-study-agent.git
+git clone https://github.com/vinaykumar-2/ai-study-agent.git
 cd ai-study-agent
 ```
 
