@@ -1,7 +1,7 @@
 ```markdown
 # 📚 AI Study Agent – Learn from PDFs & Web
 
-🎯 [🚀 **Live Demo – Try it Now**](https://ai-study-agent-nkxjeqkxdmv3jpaftuzbdw.streamlit.app/)
+## 🎯 [🚀 Live Demo – Try it Now](https://ai-study-agent-nkxjeqkxdmv3jpaftuzbdw.streamlit.app/)
 
 
 An AI-powered study assistant that helps students learn faster by answering questions from **uploaded PDFs** and performing **live web searches** when needed.  
