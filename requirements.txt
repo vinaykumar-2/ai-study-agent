@@ -1,0 +1,13 @@
+# AI Tutor Bot - Requirements
+
+streamlit
+langchain
+langchain-community
+langgraph
+google-generativeai
+langchain-google-genai
+langchain-groq
+faiss-cpu
+PyMuPDF
+duckduckgo-search
+python-dotenv

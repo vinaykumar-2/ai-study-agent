@@ -1,0 +1,30 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Streamlit config files
+.streamlit/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment variables / secrets
+.env
+
+# Project-specific data (local only, not on GitHub)
+data/faiss_db/
+data/pdfs/
+data/user_history.json
