@@ -1,4 +1,4 @@
-# AI Tutor Bot - Requirements
+# AI Study Agent - Requirements
 
 streamlit
 langchain
