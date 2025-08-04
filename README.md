@@ -1,9 +1,6 @@
 ```markdown
 # 📚 AI Study Agent – Learn from PDFs & Web
 
-## 🎯 [🚀 Live Demo – Try it Now](https://ai-study-agent-nkxjeqkxdmv3jpaftuzbdw.streamlit.app/)
-
-
 An AI-powered study assistant that helps students learn faster by answering questions from **uploaded PDFs** and performing **live web searches** when needed.  
 Built using **Streamlit, LangChain, Google Gemini API, Groq LLM, FAISS, and DuckDuckGo Search** for an interactive and intelligent study experience.
 
@@ -72,6 +69,9 @@ streamlit run main.py
 4. Continue chatting — the AI remembers your previous questions using JSON-based memory.
 
 ---
+
+## 🎯 [🚀 Live Demo – Try it Now](https://ai-study-agent-nkxjeqkxdmv3jpaftuzbdw.streamlit.app/)
+
 
 ## 💡 Future Improvements
 
