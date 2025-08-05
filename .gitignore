@@ -25,6 +25,6 @@ Thumbs.db
 .env
 
 # Project-specific data (local only, not on GitHub)
-data/faiss_db/
+#data/faiss_db/
 data/pdfs/
 data/user_history.json

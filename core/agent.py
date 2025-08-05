@@ -7,7 +7,8 @@ from langchain_groq import ChatGroq
 
 from core.config import GEMINI_API_KEY,GROQ_API_KEY
 from core.memory import add_message,load_history
-from core.rag import load_vector_store, get_retriever
+#from core.rag import load_vector_store, get_retriever
+from core import rag
 from tools.web_search import web_search_duckduckgo
 
 load_dotenv()
@@ -27,8 +28,8 @@ groq_llm = ChatGroq(
 )
 
 # Load retriever
-vectorstore = load_vector_store()
-retriever = get_retriever(vectorstore) if vectorstore else None
+#vectorstore = load_vector_store()
+#retriever = get_retriever(vectorstore) if vectorstore else None
 
 # Prompt Template For RAG
 rag_prompt = PromptTemplate.from_template("""
@@ -44,6 +45,10 @@ Question: {question}
 # Node: PDF RAG
 def pdf_rag_node(state):
     question = state["question"]
+
+    vectorstore = rag.load_vector_store()
+    retriever = rag.get_retriever(vectorstore) if vectorstore else None
+
     if not retriever:
         return {**state,"result": None, "source": "no_pdf"}
 
