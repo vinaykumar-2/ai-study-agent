@@ -59,10 +59,22 @@ def pdf_rag_node(state):
     
     context = "\n\n".join(doc.page_content for doc in docs[:3])
     prompt = rag_prompt.format(context=context, question=question)
-    answer = gemini_llm.invoke([HumanMessage(content=prompt)])
-    text = getattr(answer, "content", str(answer))
-    return {**state,"result": text , "source": "pdf"}
-
+    try:
+        # Try gemini first
+        answer = gemini_llm.invoke([HumanMessage(content=prompt)])
+        text = getattr(answer, "content", str(answer))
+        return {**state,"result": text , "source": "pdf"}
+    except Exception as e:
+        print(f"[WARNING] Gemini failed, falling back to Groq: {e}")
+        try:
+            # Fallback to Groq if Gemini fails
+            answer = groq_llm.invoke([HumanMessage(content=prompt)])
+            text = getattr(answer, "content", str(answer))
+            return {**state, "result": text, "source": "pdf-groq"}
+        except Exception as e2:
+            print(f"[ERROR] Groq also failed: {e2}")
+            return {**state, "result": "PDF search failed with both Gemini and Groq.", "source": "pdf-error"}
+        
 # Node: Web Search (Groq Summarization)
 def web_search_node(state):
     question = state["question"]
